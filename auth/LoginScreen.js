@@ -5,13 +5,20 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'reac
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false)
 
   const handleLogin = async () => {
-   
+   try {
+    setLoading(true)
     navigation.navigate('Products');
-  };
+   } catch (error) {
+    
+   } finally{
+    setLoading(false)
 
-  
+   }
+    
+  };
 
   return (
     <View style={styles.container}>
@@ -33,7 +40,7 @@ export default function LoginScreen({ navigation }) {
       <TouchableOpacity>
         <Text style={styles.forgotPassword}>¿Has olvidado tu contraseña?</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin} disabled ={loading} >
         <Text style={styles.loginButtonText}>iniciar sesión</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.googleButton}>

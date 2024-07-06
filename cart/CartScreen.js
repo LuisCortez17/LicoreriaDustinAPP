@@ -1,9 +1,8 @@
-// CartScreen.js
+
 import React, { useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, FlatList, Image } from 'react-native';
 import { CartContext } from '../context/CartContext';
 
-// Datos de ejemplo para los productos en el carrito
 
 export default function CartScreen({ navigation }) {
     const { cart } = useContext(CartContext);

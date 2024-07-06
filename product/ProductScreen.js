@@ -1,4 +1,4 @@
-// ProductScreen.js
+
 import React, { useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, FlatList, Image } from 'react-native';
 import { CartContext } from '../context/CartContext';
@@ -9,7 +9,7 @@ const products = [
   { id: '3', name: 'Corona Six Pack', size: '210ML', price: '15.90', image: require('../assets/corona.png') },
   { id: '4', name: 'STELLA ARTOIS', size: '330ML', price: '36.00', image: require('../assets/StellaArtois.png') },
   { id: '5', name: 'Marlboro Gold Box', size: '100%', price: '6.00', image: require('../assets/malboro1.png') },
-  // Añadir más productos según sea necesario
+ 
 ];
 
 export default function ProductScreen({ navigation }) {
