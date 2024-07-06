@@ -9,6 +9,11 @@ export default function ProductDetailScreen({route, navigation }) {
 
     const handleBack = () => {
         navigation.goBack();
+  
+    };
+
+    const handleCart = () => {
+    navigation.navigate('Cart');
     };
 
 
@@ -45,7 +50,7 @@ export default function ProductDetailScreen({route, navigation }) {
             </View>
             <View style={styles.footer}>
                 <Text style={styles.productPrice}>S/.{product.price}</Text>
-                <TouchableOpacity style={styles.buyButton}>
+                <TouchableOpacity style={styles.buyButton} onPress={handleCart}>
                     <Text style={styles.buyButtonText}>COMPRAR</Text>
                 </TouchableOpacity>
             </View>
